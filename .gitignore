@@ -1,0 +1,5 @@
+# ignore directory mount volume database
+/data
+
+# ignore file redis-docker-compose.tar
+redis-docker-compose.tar

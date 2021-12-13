@@ -1,0 +1,11 @@
+version: "3"
+services:
+  keydb:
+    image: eqalpha/keydb:alpine
+    container_name: nooim-keydb
+    command: keydb-server --maxclients 100000 --server-threads 2 --protected-mode no
+    restart: on-failure
+    ports:
+      - 6380:6379
+    volumes:
+      - ./data:/data
